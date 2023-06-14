@@ -4,68 +4,39 @@
     <meta charset="UTF-8">
     <title>Telegram покупка</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+        /* Ваш существующий CSS-код */
 
-        h1 {
-            color: #333;
-        }
-
-        .product {
-            margin-bottom: 20px;
-        }
-
-        .product img {
-            max-width: 200px;
-            margin-bottom: 10px;
-        }
-
-        .product h2 {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-
-        .product p {
-            color: #777;
-        }
-
+        /* Анимация пульсации */
         .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
+            animation: pulse 1s infinite;
         }
 
-        .button:hover {
-            background-color: #0056b3;
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Телеграмм покупка</h1>
-    
+    <!-- Ваш существующий HTML-код -->
+
+    <!-- Код товара с добавленной анимацией -->
     <div class="product">
-        <img src="https://n1s2.hsmedia.ru/e3/ec/d6/e3ecd6991bcc3050b74ac8c6eb58ddef/728x622_1_8bd5931882cbe17f0f273edfa5cad128@4526x3865_0xac120003_16621087371657528398.jpeg" alt="cat">
-        <h2>Китайский кот</h2>
-        <p>Может и дом построить.</p>
+        <img src="product_image.jpg" alt="Product Image">
+        <h2>Название товара</h2>
+        <p>Описание товара.</p>
         <p>Цена: $19.99</p>
-        <a href="https://t.me/Perseverance_123" class="button">Купить</a>
+        <a href="https://t.me/ваш_телеграм_аккаунт" class="button">Купить</a>
     </div>
 
-    <div class="product">
-        <img src="https://klike.net/uploads/posts/2023-03/1678769442_1.jpg" alt="Burger">
-        <h2>Комбо 6 в 1</h2>
-        <p>Наивкуснейший аппетитный обед на любой день.</p>
-        <p>Цена: $29.99</p>
-        <a href="https://t.me/Perseverance_123" class="button">Купить</a>
-    </div>
+    <!-- Код других товаров с добавленной анимацией -->
 
-    <!-- Добавьте другие товары здесь -->
-    
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>
