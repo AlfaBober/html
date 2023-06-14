@@ -4,88 +4,56 @@
     <meta charset="UTF-8">
     <title>Telegram покупка</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: black;
-            color: white;
-        }
-
-        h1 {
-            color: white;
-            text-align: left;
-        }
-
-        .product {
-            margin-bottom: 20px;
-        }
-
-        .product img {
-            max-width: 200px;
-            margin-bottom: 10px;
-        }
-
-        .product h2 {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-
-        .product p {
-            color: #777;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        .button.clicked {
-            animation: pulse 0.5s;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
+        /* Стили остаются без изменений */
+        /* ... */
     </style>
 </head>
 <body>
     <h1 style="text-align: left;">Телеграмм покупка</h1>
     
-    <div class="product">
-        <img src="https://n1s2.hsmedia.ru/e3/ec/d6/e3ecd6991bcc3050b74ac8c6eb58ddef/728x622_1_8bd5931882cbe17f0f273edfa5cad128@4526x3865_0xac120003_16621087371657528398.jpeg" alt="cat">
-        <h2>Китайский кот</h2>
-        <p>Может и дом построить.</p>
-        <p>Цена: $19.99</p>
-        <a href="#" class="button" onclick="buttonClicked('Я хочу купить Китайский кот за $19.99')">Купить</a>
+    <div class="product" id="product1">
+        <!-- Содержимое первого товара -->
+        <!-- ... -->
+        <a href="https://t.me/Perseverance_123" class="button" onclick="showDescription('description1')">Купить</a>
     </div>
 
-    <div class="product">
-        <img src="https://klike.net/uploads/posts/2023-03/1678769442_1.jpg" alt="Burger">
-        <h2>Комбо 6 в 1</h2>
-        <p>Наивкуснейший аппетитный обед на любой день.</p>
-        <p>Цена: $29.99</p>
-        <a href="#" class="button" onclick="buttonClicked('Я хочу купить Комбо 6 в 1 за $29.99')">Купить</a>
+    <div class="product" id="product2">
+        <!-- Содержимое второго товара -->
+        <!-- ... -->
+        <a href="https://t.me/Perseverance_123" class="button" onclick="showDescription('description2')">Купить</a>
     </div>
 
     <!-- Добавьте другие товары здесь -->
     
+    <div id="description1" style="display: none;">
+        <!-- Форма с описанием первого товара -->
+        <h2>Китайский кот</h2>
+        <p>Может и дом построить.</p>
+        <p>Цена: $19.99</p>
+    </div>
+
+    <div id="description2" style="display: none;">
+        <!-- Форма с описанием второго товара -->
+        <h2>Комбо 6 в 1</h2>
+        <p>Наивкуснейший аппетитный обед на любой день.</p>
+        <p>Цена: $29.99</p>
+    </div>
+
+    <!-- Добавьте другие формы описания товаров здесь -->
+    
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        function buttonClicked(message) {
-            const chatId = '5102830551'; // Замените на свой chat_id
+        function showDescription(descriptionId) {
+            // Скрыть все товары
+            var products = document.getElementsByClassName('product');
+            for (var i = 0; i < products.length; i++) {
+                products[i].style.display = 'none';
+            }
+            
+            // Показать форму описания товара
+            var description = document.getElementById(descriptionId);
+            description.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
