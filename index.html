@@ -65,14 +65,14 @@
     </style>
 </head>
 <body>
-    <h1>Телеграмм покупка</h1>
+    <h1 style="text-align: left;">Телеграмм покупка</h1>
     
     <div class="product">
         <img src="https://n1s2.hsmedia.ru/e3/ec/d6/e3ecd6991bcc3050b74ac8c6eb58ddef/728x622_1_8bd5931882cbe17f0f273edfa5cad128@4526x3865_0xac120003_16621087371657528398.jpeg" alt="cat">
         <h2>Китайский кот</h2>
         <p>Может и дом построить.</p>
         <p>Цена: $19.99</p>
-        <a href="https://t.me/Perseverance_123" class="button" onclick="buttonClicked(this)">Купить</a>
+        <a href="#" class="button" onclick="buttonClicked('Китайский кот', '$19.99')">Купить</a>
     </div>
 
     <div class="product">
@@ -80,16 +80,12 @@
         <h2>Комбо 6 в 1</h2>
         <p>Наивкуснейший аппетитный обед на любой день.</p>
         <p>Цена: $29.99</p>
-        <a href="https://t.me/Perseverance_123" class="button" onclick="buttonClicked(this)">Купить</a>
+        <a href="#" class="button" onclick="buttonClicked('Комбо 6 в 1', '$29.99')">Купить</a>
     </div>
 
     <!-- Добавьте другие товары здесь -->
     
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        function buttonClicked(element) {
-            element.classList.add('clicked');
-        }
-    </script>
-</body>
-</html>
+        function buttonClicked(productName, price) {
+            var message = "Я хочу купить " + productName + " за " + price;
+            var botToken = 'YOUR
