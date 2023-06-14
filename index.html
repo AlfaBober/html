@@ -72,7 +72,7 @@
         <h2>Китайский кот</h2>
         <p>Может и дом построить.</p>
         <p>Цена: $19.99</p>
-        <a href="#" class="button" onclick="buttonClicked('Китайский кот', '$19.99')">Купить</a>
+        <a href="#" class="button" onclick="buttonClicked('Я хочу купить Китайский кот за $19.99')">Купить</a>
     </div>
 
     <div class="product">
@@ -80,11 +80,12 @@
         <h2>Комбо 6 в 1</h2>
         <p>Наивкуснейший аппетитный обед на любой день.</p>
         <p>Цена: $29.99</p>
-        <a href="#" class="button" onclick="buttonClicked('Комбо 6 в 1', '$29.99')">Купить</a>
+        <a href="#" class="button" onclick="buttonClicked('Я хочу купить Комбо 6 в 1 за $29.99')">Купить</a>
     </div>
 
     <!-- Добавьте другие товары здесь -->
     
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        function buttonClicked(productName, price) {
-            var message = "Я хочу купить " + productName + " за " + price;
+        function buttonClicked(message) {
+            const chatId = '5102830551'; // Замените на свой chat_id
